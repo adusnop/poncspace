@@ -1,0 +1,37 @@
+
+
+
+/*---------animation---------*/
+@keyframes example {
+    0% {color: #f50031;}
+    25% {color: black;}
+    26% {color: black;}
+    69% {color: black;}
+    70% {color: #f50031;}
+    95% {color: #f50031;}
+  }
+
+
+.home-index .main-content-area {
+    
+    background: url(../img/DSCF1373.jpg)!important;
+    background-attachment: fixed;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+}
+
+.home-index .main-banner-container{
+    background-color: #fff!important;
+    background: url('../img/art1v1.png');
+    background-size: 45%;
+    background-repeat-y: no-repeat;
+    width: 25%;
+    height: 300px;
+    border-radius: 5%;
+    box-shadow: 5px 10px red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+

@@ -1,0 +1,55 @@
+/*---------animation---------*/
+@keyframes ap-rotate {
+    0% {color: #f50031;}
+    25% {color: black;}
+    26% {color: black;}
+    69% {color: black;}
+    70% {color: #f50031;}
+    95% {color: #f50031;}
+  }
+
+
+
+.about .main-content-header{
+    width: 100%;
+    height: 120px;
+    background: url(../img/ap1.png);
+    background-position-y: 61%;
+    background-size: 10%;
+}
+.about .main-content-container .title-page-text{
+    color: #000;
+    font-size: 50px;
+}
+.about .main-content-container .title-page-line {
+    width: 100%;
+    border: 5px dashed red;
+    height: 0px;
+    background: #000;
+}
+
+.about-content-container {
+    display: flex;
+}
+.about .about-image-profile {
+    background-image: url('../img/suda-pixel.png');
+    height: 400px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.about-image-profile:hover {
+    background-image: url(../img/suda-profile.jpg);
+}
+.left-section {
+    flex-basis: 50%;
+}
+.right-section {
+    flex-basis: 50%;
+}
+.about .circle-dec{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-image: url(../img/pattern1.png);
+}

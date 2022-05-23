@@ -1,0 +1,103 @@
+/*---------global---------*/
+h1{
+    font-family: 'VT323';
+    animation-name: example;
+  animation-duration: 3s;
+  color:black;
+  animation-iteration-count: infinite;
+  margin-bottom: 0px;
+}
+h2{
+    font-family: 'VT323';
+    margin: unset;
+}
+p{
+    font-family: 'VT323';
+}
+body{
+    margin:unset!important;
+}
+
+/*-----page-area-----*/
+.page-area {
+    position: relative;
+}
+
+.main-content-area {
+
+    height: 100vh;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 80%;
+}
+
+.main-content-container{
+    padding: 5%;
+}
+.main-content-container .title-page {
+    display: flex;
+    align-items: center;
+}
+.title-page-text h2 {
+    text-transform: uppercase;
+}
+
+/*-------head------*/
+.side-mainmenu-desktop{
+    background: #fff;
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 4%;
+}
+ul.list-menu-item {
+    padding: unset;
+    margin-top: 50px;
+}
+ul.list-menu-item li {
+    list-style: none;
+}
+.side-mainmenu-desktop .h-link-item a {
+    text-decoration: unset;
+    font-size: 20px;
+    color: #000;
+    font-family: 'VT323';
+    line-height: 1.2;
+}
+.song-banner-player{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    background:red;
+    z-index: 99;
+}
+.logo-web-text {
+    position: relative;
+    height: 90px;
+    width: 100px;
+}
+.logo-text-item:nth-child(2) {
+    position: absolute;
+    bottom: 9px;
+    right: 0;
+    transform: rotate(-10deg);
+}
+.logo-web-text p {
+    font-family: 'Caveat';
+    margin: unset;
+    font-size: 30px;
+}
+.logo-web-text h1{
+    margin: unset;
+    font-size: 60px;
+}
+.side-mainmenu-desktop .h-link-item a:hover::after {
+    content: '<<<';
+    color: red;
+    font-family: 'VT323';
+    margin-left: 7px;
+}
