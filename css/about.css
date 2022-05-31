@@ -1,29 +1,18 @@
-/*---------animation---------*/
-@keyframes ap-rotate {
-    0% {color: #f50031;}
-    25% {color: black;}
-    26% {color: black;}
-    69% {color: black;}
-    70% {color: #f50031;}
-    95% {color: #f50031;}
-  }
-
-
-
-.about .main-content-header{
+.content-page[content="about"] .main-content-header{
     width: 100%;
-    height: 120px;
-    background: url(../img/ap1.png);
-    background-position-y: 61%;
-    background-size: 10%;
+    height: 60px;
+    background: url(/img/ap1.png);
+    background-position-y: 50%;
+    background-size: 4%;
 }
-.about .main-content-container .title-page-text{
-    color: #000;
-    font-size: 50px;
+ .title-page-text{
+    color: var(--third--fontc);
+    font-size: 4.3rem;
+    text-shadow: red 3px 2px;
 }
-.about .main-content-container .title-page-line {
+.content-page[content="about"] .title-page-line {
     width: 100%;
-    border: 5px dashed red;
+    border: 4px dashed red;
     height: 0px;
     background: #000;
 }
@@ -31,25 +20,33 @@
 .about-content-container {
     display: flex;
 }
-.about .about-image-profile {
-    background-image: url('../img/suda-pixel.png');
-    height: 400px;
-    width: 300px;
+.content-page[content="about"] .aboutme-img {
+    background-image: url('/img/suda-pixel.png');
+    height: 250px;
+    width: 250px;
     background-size: cover;
     background-position: center;
 }
-.about-image-profile:hover {
-    background-image: url(../img/suda-profile.jpg);
+.content-page[content="about"] .aboutme-img:hover {
+    background-image: url(/img/suda-profile.jpg);
 }
-.left-section {
-    flex-basis: 50%;
-}
-.right-section {
-    flex-basis: 50%;
-}
-.about .circle-dec{
+
+
+.content-page[content="about"] .circle-dec{
     width: 300px;
     height: 300px;
     border-radius: 100%;
-    background-image: url(../img/pattern1.png);
+    background-image: url(/img/pattern1.png);
+}
+
+
+.boxstyle-2{
+    background: var(--primary-bgc);
+    padding: 35px;
+    border-radius: 20px;
+    background-position: bottom;
+    background-size: 14%;
+    background-repeat: repeat-x;
+    background-image: url('/img/ap4.png');
+    margin-bottom: 40px;
 }

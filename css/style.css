@@ -1,50 +1,151 @@
 /*---------global---------*/
-h1{
-    font-family: 'VT323';
-    animation-name: example;
-  animation-duration: 3s;
-  color:black;
-  animation-iteration-count: infinite;
-  margin-bottom: 0px;
+:root {
+    --primary-bgc: #fff;
+    --secondary-bgc: #ff0000; 
+    --fontf-head: 'VT323';
+    --fontf-icon: 'Fontawesome';
+    --primary-fontc: #000;
+    --second-fontc: #ff0000;
+    --third--fontc: #fff;
+    --primary-box-shadow: 5px 10px #ff0000;
+  }
+
+html{
+    font-size: 16px;
 }
-h2{
-    font-family: 'VT323';
+html, html:hover, button, button:hover{
+    cursor: url(/img/cursor.cur), auto;
+}
+h1,h2,h3,h6, p, span, a, button{
+    font-family: var(--fontf-head);
     margin: unset;
-}
-p{
-    font-family: 'VT323';
+    text-decoration: unset;    
 }
 body{
     margin:unset!important;
 }
+.content-page[content="home"],
+.content-page[content="about"],
+.content-page[content="works"],
+.content-page[content="contact"]
+{
+    display: none;
+}
+.show.content-page{
+    display: flex;
+}
+button{
+    border: unset;
+    background:unset;
+    font-size: 1.3rem;
+}
+html::-webkit-scrollbar,div::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-track,div::-webkit-scrollbar-track  {
+    border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+    background: var(--secondary-bgc); 
+    border-radius: 10px;
+  }
+html::-webkit-scrollbar-thumb:hover, div::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-bgc); 
+}
 
-/*-----page-area-----*/
-.page-area {
+/*---------page-area---------*/
+
+.page-area,.sec-relative {
     position: relative;
 }
 
 .main-content-area {
-
-    height: 100vh;
+    display: none;
+    height: auto;
+    min-height: 100vh;
     right: 0;
     top: 0;
     position: absolute;
     width: 80%;
 }
-
+.content-page{
+    display: flex;
+}
 .main-content-container{
-    padding: 5%;
+    padding: 4%;
 }
 .main-content-container .title-page {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 .title-page-text h2 {
     text-transform: uppercase;
 }
 
-/*-------head------*/
+.left-section,.right-section {
+    display:grid;
+    place-content: center;
+}
+.left-section{
+    flex-basis: 30%;
+    padding: 4%;
+}
+.right-section{
+    flex-basis: 70%;
+    padding: 4%;
+}
+.boxstyle-1 {
+	background: white;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 5px 10px red;
+    margin-bottom: 40px;
+}
+.boxstyle-main{
+    background-color: #fff!important;
+    background: url('/img/leaft.png');
+    background-size: 90%;
+    background-repeat: repeat-x;
+    width: 17vw;
+    height: 300px;
+    padding: 5%;
+    border-radius: 5%;
+    box-shadow: 5px 10px red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+button.ap-next.link-page{
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+.one-apple{
+    width: 50px;
+    height: 50px;
+    background: url('/img/ap3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.one-apple:hover {
+    background: url('/img/ap2.png');
+    background-size: contain;
+}
+.ap-spin{
+    animation-name: ap-spin;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    width: 20px!important;
+    height: 20px!important;
+}
+
+/*----------head---------------*/
+
 .side-mainmenu-desktop{
+    display: none;
     background: #fff;
     height: 100vh;
     width: 20%;
@@ -60,20 +161,30 @@ ul.list-menu-item {
 ul.list-menu-item li {
     list-style: none;
 }
-.side-mainmenu-desktop .h-link-item a {
+.h-link-item button {
     text-decoration: unset;
-    font-size: 20px;
-    color: #000;
-    font-family: 'VT323';
+    font-size: 1.3rem;
+    color: var(--primary-fontc);
+    font-family: var(--fontf-head);
     line-height: 1.2;
+    
+    text-align: left;
 }
-.song-banner-player{
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    bottom: 0;
-    background:red;
-    z-index: 99;
+.h-link-item button:hover {
+    background: black;
+    color: var(--third--fontc);
+    width: 7vw;
+    animation-name: colorset2;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
+button.link-page.show p:after{
+    content:'\f5d1';
+    font-family: var(--fontf-icon);
+    width: 20px;
+    height: 20px;
+    color: var(--second-fontc);
+    margin-left: 7px;
 }
 .logo-web-text {
     position: relative;
@@ -88,16 +199,95 @@ ul.list-menu-item li {
 }
 .logo-web-text p {
     font-family: 'Caveat';
-    margin: unset;
-    font-size: 30px;
+    
+    font-size: 2rem;
 }
 .logo-web-text h1{
-    margin: unset;
-    font-size: 60px;
+    font-size: 4rem;
+    animation-name: colorset1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
-.side-mainmenu-desktop .h-link-item a:hover::after {
-    content: '<<<';
-    color: red;
-    font-family: 'VT323';
-    margin-left: 7px;
+.logo-ap-item{
+    background: url('/img/ap1.png');
+    height: 100px;
+    width: 100px;
+}
+
+/*----------start screen--------------*/
+
+.start-screen {
+    position: absolute;
+    top: 500px;
+    left: 65%;
+}
+.click-here {
+    display: none;
+}
+.one-apple:hover + .click-here {
+    display: block;
+}
+
+/*-------Contact-----------*/
+
+form.contact-form {
+    width: 24vw;
+}
+.contact-item a {
+    display: flex;
+    color: var(--primary-fontc);
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+a.mail::before {
+    content: '\f0e0';
+    font-family: var(--fontf-icon);
+    padding-right: 8px;
+}
+a.tel::before {
+    content: '\f095';
+    font-family: var(--fontf-icon);
+    padding-right: 8px;
+}
+a.linkedin::before {
+    content: '\f08c';
+    font-family: var(--fontf-icon);
+    padding-right: 8px;
+}
+.forms-item input,
+.forms-item textarea{
+    height: 34px;
+    width: 94%;
+    border-radius: 5px;
+    font-family: var(--fontf-head);
+    border: 3px dashed red;
+    margin: 10px 0px;
+    padding-left: 10px;
+}
+.forms-item input::placeholder,
+.forms-item textarea::placeholder{
+    color: var(--primary-fontc)!important;
+}
+.forms-item input:focus-visible,
+.forms-item textarea:focus-visible {
+    outline: unset;
+    background: red;
+    color: var(--third--fontc);
+    border: 3px dashed black;
+}
+.submit-btn-item {
+    text-align: center;
+    margin-top: 10px;
+}
+.forms-item input:focus-visible::placeholder,
+.forms-item textarea::placeholder {
+    color: var(--third--fontc);
+}
+.submit-btn-item button {
+    background: red;
+    border: 2px dashed white;
+    padding: 6px 37px;
+    border-radius: 5px;
+    color: white;
 }

@@ -1,0 +1,47 @@
+/*---------animation---------*/
+@keyframes ap-rotate {
+  0% {color: #f50031;}
+  25% {color: black;}
+  26% {color: black;}
+  69% {color: black;}
+  70% {color: #f50031;}
+  95% {color: #f50031;}
+}
+@keyframes colorset1 {
+  0% {color: #f50031;}
+  25% {color: black;}
+  26% {color: black;}
+  69% {color: black;}
+  70% {color: #f50031;}
+  95% {color: #f50031;}
+}
+@keyframes colorset2 {
+  0% {background-color: #000;}
+  100%{background-color: #f50031;}
+}
+@keyframes ef-ud {
+  0% {margin-top: 0;}
+  25% {margin-top: 10px;}
+  50% {margin-top: 0;}
+  75% {margin-top: 10px;}
+  100% {margin-top: 0px;}
+}
+@keyframes ap-spin{
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(90deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
+}
+  
+.ef-ud{
+  animation-name: ef-ud;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+    
+}
+.hover-efc{
+    animation-name: colorset2;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
